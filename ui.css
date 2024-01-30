@@ -1,0 +1,62 @@
+#controlls {
+    z-index: 10;
+    position: fixed;
+    overflow: hidden;
+    top: 20px;
+    left: 20px;
+
+    min-height: 400px;
+    width: 300px;
+
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px black;
+    background-color: rgba(255, 255, 255, .5);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#startButton {
+    z-index: 11;
+
+    height: 40px;
+    width: 100px;
+
+    cursor: pointer;
+    background-color: rgb(37, 78, 64);
+    font-weight: bolder;
+    color: white;
+    outline: 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+
+    transition: all 0.3s;
+}
+
+#startButton:hover {
+    border: 2px solid white;
+}
+
+#stopButton {
+    position: absolute;
+    bottom: 0;
+
+    height: 30px;
+    width: 100%;
+
+    cursor: pointer;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    color: balck;
+    font-weight: bolder;
+    outline: 0;
+    border: none;
+    border-top: 2px solid transparent;
+
+    transition: all 0.3s;
+}
+
+#stopButton:hover {
+    border-top: 2px solid white;
+}

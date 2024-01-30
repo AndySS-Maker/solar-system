@@ -1,0 +1,264 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbiting-object {
+    z-index: 10;
+    position: absolute;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    border-left: 1px solid rgba(255, 255, 255, .1);
+
+    border-radius: 50%;
+
+    cursor: help;
+}
+
+.orbiting-object::before {
+    content: '';
+    position: absolute;
+
+    left: 50%;
+
+    border-radius: 50%;
+    z-index: 12;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+    min-height: 700px;
+    min-width: 700px;
+
+    background-color: rgb(0, 0, 40);    
+}
+
+.sun {
+    position: absolute;
+    animation: sun 10s infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+
+    background-color: rgb(255, 208, 0);
+    box-shadow: 0 0 10px white;
+
+    cursor: help;
+}
+
+#mercury {
+    height: 205px;
+    width: 205px;
+}
+#mercury::before {
+    top: -4.5px;
+    left: calc(50% - 4.5px);
+
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: rgb(233, 192, 103);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+#venus {
+    height: 260px;
+    width: 260px;
+}
+#venus::before {
+    top: -9px;
+    left: calc(50% - 9px);
+
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: rgb(139, 52, 17);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+#earth {
+    display: flex;
+    justify-content: center;
+
+    height: 360px;
+    width: 360px;
+}
+#earth::before {
+    top: -10px;
+    left: calc(50% - 10px);
+    
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(0, 129, 168);
+    box-shadow: 0 0 3px rgba(255,255,255);
+}
+
+.moon {
+    position: relative;
+    animation: orbit 1.5s linear infinite;
+    margin-top: -10px;
+
+    height: 40px;
+    width: 40px;
+
+    top: -10px;
+}
+.moon::before {
+    height: 6px;
+    width: 6px;
+
+    border-radius: 50%;
+    background-color: rgb(180, 180, 180);
+}
+
+#mars {
+    height: 480px;
+    width: 480px;
+}
+#mars::before {
+    top: -7.5px;
+    left: calc(50% - 7.5px);
+
+    height: 15px;
+    width: 15px;
+
+    border-radius: 50%;
+    background-color: rgb(136, 89, 70);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+#jupter {
+    height: 620px;
+    width: 620px;
+}
+#jupter::before {
+    top: -20px;
+    left: calc(50% - 20px);
+
+    height: 40px;
+    width: 40px;
+
+    border-radius: 50%;
+    background-color: rgb(177, 152, 107);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+#saturn {
+    display: flex;
+    justify-content: center;
+
+    height: 800px;
+    width: 800px;
+}
+#saturn::before {
+    top: -16px;
+    left: calc(50% - 16px);
+
+    height: 32px;
+    width: 32px;
+
+    border-radius: 50%;
+    background-color: rgb(211, 193, 164);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+.oring-one {
+    position: absolute;
+    animation: orbit 103.3s linear infinite;
+    margin-left: 410px;
+    margin-top: -12px;
+
+    height: 50px;
+    width: 25px;
+
+    top: -14px;
+    left: -22px;
+
+    border: 2px solid rgba(200,200,200,.4);
+}
+.oring-two {
+    position: absolute;
+    animation: orbit 103.3s linear infinite;
+    margin-left: 408px;
+    margin-top: -16px;
+
+    height: 58px;
+    width: 29px;
+
+    top: -14px;
+    left: -22px;
+
+    border: 2px solid rgba(200, 200, 200, .4);
+}
+
+#uranus {
+    height: 930px;
+    width: 930px;
+}
+#uranus::before {
+    top: -9px;
+    left: calc(50% - 9px);
+
+    height: 18px;
+    width: 18px;
+
+    border-radius: 50%;
+    background-color: rgb(98, 133, 143);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+#neptune {
+    height: 1100px;
+    width: 1100px;
+}
+#neptune::before {
+    top: -9px;
+    left: calc(50% - 9px);
+
+    height: 18px;
+    width: 18px;
+
+    border-radius: 50%;
+    background-color: rgb(141, 150, 193);
+    box-shadow: 0 0 3px rgba(255, 255, 255);
+}
+
+
+@keyframes sun {
+    25% {
+       
+        background-color: rgb(255, 166, 0);
+    }
+    50% {
+        background-color: rgb(255, 208, 0);
+    }
+    75% {
+        background-color: rgb(255, 166, 0);
+    }
+    100% {
+        background-color: rgb(255, 208, 0);
+    }
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}

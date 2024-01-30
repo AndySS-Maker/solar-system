@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./ui.css">
+    <script src="./globals.js"></script>
+    <script src="./uiFunctions.js"></script>
+</head>
+<body>
+    <div id="controlls">
+        <div>
+            <label for="scale" id="scaleLabel">One Earth year in 10s</label>
+            <input id="scale" type="range" value="-20" min="-20" max="-1" onchange="setEarthYear(this.value)">
+        </div>
+
+        <div>
+            <br />
+            <p id="mercuryYears"></p>
+            <p id="venusYears"></p>
+            <p id="earthYears"></p>
+            <p id="marsYears"></p>
+            <p id="jupterYears"></p>
+            <p id="saturnYears"></p>
+            <p id="uranusYears"></p>
+            <p id="neptuneYears"></p>
+        </div>
+
+        <div>
+            <button id="stopButton" onclick="stop()">Stop</button>
+        </div>
+    </div>
+
+
+    <div class="container flex-center">
+        <div id="neptune" class="orbiting-object" title="Neptune"></div>
+        <div id="uranus" class="orbiting-object" title="Uranus"></div>
+        <div id="saturn" class="orbiting-object flex-center" title="Saturn">
+            <div class="orbiting-object oring-one"></div>
+            <div class="orbiting-object oring-two"></div>
+        </div>
+        <div id="jupter" class="orbiting-object" title="Jupter"></div>
+        <div id="mars" class="orbiting-object" title="Mars"></div>
+        <div id="earth" class="orbiting-object" title="Earth">
+            <div class="orbiting-object moon" title="Earth Moon"></div>
+        </div>
+        <div id="venus" class="orbiting-object" title="Venus"></div>
+        <div  id="mercury" class="orbiting-object" title="Mercury"></div>
+        <div class="sun flex-center" title="Sun">
+            <button id="startButton" onclick="start()">Start</button>
+        </div>
+    </div>    
+
+    <script src="./updateUi.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
